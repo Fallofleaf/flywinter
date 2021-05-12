@@ -1,15 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <title>主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta name="description" content="落叶知秋的博客">
+    <meta name="keywords" content="HTML,Blog,落叶">
+    <link  rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/>
 </head>
 <body>
-<h1>
-    My Blog
-</h1>
+<style>
+    @media screen and (min-width:960px) {
+        .side{
 
-<button>这是一个Button</button>
+        width: 25% !important;
+    }
+    .content{
+        width: 50%;
+    }
+    .mobile{
+        display: flex;
+        flex-wrap: nowrap;
 
+       
+    }
+    }
+    /* @media  screen and (max-width:1200px) {
+        .side{
+        
+            width: 25% !important;
+        }
+        .mobile{
+            display: flex;
+            flex-wrap: nowrap;
+
+           
+        }
+    } */
+    @media screen and (max-width:960px) {
+        .side{
+        
+            width: 100% !important;
+        }
+        .content{
+            width: 100%;
+        }
+        .mobile{
+           display: flex;
+           flex-wrap: wrap;
+        }
+    }
+
+    .background{
+        background: linear-gradient(to bottom,#c0c0aa,#1cefff);
+    }
+    .card{
+        box-shadow: 0px 0px 6px  #2c2c2c;
+        
+        border-radius: 4px;
+        margin: 8px;
+        padding: 16px;
+    }
+    .user_photo{
+        border-radius: 50%;
+        margin: 10px;
+        min-width: 150px;
+        min-height: 150px;
+    }
+    .linear_margin{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .m_bottom{
+        margin-bottom: 8px;
+    }
+</style>
+
+<div class="background mobile" >
+
+    <!-- 侧边栏 -->
+    <div class="side card"  style="text-align: center;background: #93edc7;" > 
+        <img class="user_photo" src="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/>
+        <div class="linear_margin">
+            <span>张兴坤</span>
+        </div>
+        <div  class="linear_margin">
+            <span>现居武汉</span>
+        </div>
+        <div  class="linear_margin">
+            <span>Android|Web前后端</span>
+        </div>
+        <div style="margin-top: 48px;">
+            <div>
+                自我评价
+            </div>
+            <ul style="text-align: left;">
+                <li class="linear_margin">性格开朗、积极向上、为人友善、具有良好的人际交往能力</li>
+                <li class="linear_margin">诚实守信，做事有始有终，吃苦耐劳，能够虚心向他人请教</li>
+                <li class="linear_margin">有较强的学习能力和抗压能力，有较强的自学能力，能充分利用网络资源</li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- 内容 -->
+
+    <div class="card content" style="background: rgb(241, 227, 201)">
+        
+        <div class="m_bottom">
+            <div class="m_bottom">
+                教育背景
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="width: 50%;">2018.09-2022.06</div>
+                 <div style="width: 50%;">
+                     <div>武汉工程大学</div>
+                    <div>机械电子工程</div>
+                    <div>本科</div>
+                </div>
+            </div>
+        </div>
+        <div  class="linear_margin">
+            <div>
+                个人技能
+            </div> 
+            <ul style="text-align: left;">
+                <li class="m_bottom">熟悉C、Java，Kotlin、了解Python</li>
+                <li class="m_bottom">熟悉Html5,css3,javascript</li>
+                <li class="m_bottom">熟悉Vue3.0,Vue-cli搭建项目流程</li>
+                <li class="m_bottom">熟悉Altium designer,能够进行PCB原理图，PCB双层板的绘制</li>
+                <li class="m_bottom">熟悉Solidworks,CAD等三维建模软件</li>
+                <li class="m_bottom">熟悉IDEA,Android Studio,VScode软件</li>
+                <li class="m_bottom">熟悉PS,PR，能够进行简单的图片处理和视频剪辑</li>
+                <li class="m_bottom">熟悉Keil5</li>
+                <li class="m_bottom">了解Linux相关操作</li>
+                <li class="m_bottom">了解MySql</li>
+            </ul>
+           
+        </div>
+        <div  class="m_bottom">
+            <div class="m_bottom">
+                项目经历
+            </div>
+            <div style="margin-bottom: 4px;">
+                &nbsp;2020.6-2020.12
+            </div>
+            <div style="margin-bottom: 6px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;完成了个人博客网站的开发
+            </div >
+            <div style="margin-bottom: 4px;">
+                &nbsp;2021.3-2020.5
+            </div>
+            <div >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人进行"枫叶记账"APP的开发工作，枫叶记账是一筐基于Kotlin语言、Jetpack组件的MVVM架构式
+                手机端记账程序，支持账单统计、账单搜索、账单导入和导出等多种功能
+                <div style="text-align: center;">
+                    <a href="https://play.google.com/store/apps/details?id=com.flywinter.mapleaccount" target="_blank">Google Play下载链接</a>
+                </div>
+            </div>
+        </div>
+        <div  class="m_bottom">
+            <div>
+                奖励荣誉
+            </div>
+            <ul>
+                <li class="m_bottom">
+                    2019创行社会创新大赛区域赛三等奖
+                </li>
+                <li class="m_bottom">
+                    班级三等奖学金、三好学生
+                </li>
+            </ul>
+         
+        
+            
+        </div>
+    </div>
+</div>
+<!-- <table border="1" >
+    <tr>
+        <th>Who AM I?</th>
+        <th>ME</th>
+    </tr>
+    <tr>
+        <td><img src="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/></td>
+    </tr>
+</table> -->
 </body>
 </html>
