@@ -7,15 +7,15 @@
     <meta name="keywords" content="HTML,Blog,落叶">
     <link  rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/>
 </head>
-<body>
+<body >
 <style>
     @media screen and (min-width:960px) {
         .side{
 
-        width: 25% !important;
+        width: 250px !important;
     }
     .content{
-        width: 50%;
+        width: 60%;
     }
     .mobile{
         display: flex;
@@ -51,7 +51,13 @@
     }
 
     .background{
-        background: linear-gradient(to bottom,#c0c0aa,#1cefff);
+        /* background: linear-gradient(to bottom,#c0c0aa,#1cefff); */
+        background: url('/img/504016690347118592f3afc4c5d2864264810a5ad1f7b1428c.jpeg') no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        overflow: visible;
     }
     .card{
         box-shadow: 0px 0px 6px  #2c2c2c;
@@ -73,27 +79,31 @@
     .m_bottom{
         margin-bottom: 8px;
     }
+    body{
+        margin: 0px  !important;
+    }
+   
 </style>
-
-<div class="background mobile" >
+<div class="background"></div>
+<div class=" mobile" >
 
     <!-- 侧边栏 -->
-    <div class="side card"  style="text-align: center;background: #93edc7;" > 
+    <div class="side card"  style="text-align: center;background: #93edc7;opacity: .9;height: fit-content;" > 
         <img class="user_photo" src="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/>
-        <div class="linear_margin">
+        <h2 class="linear_margin">
             <span>张兴坤</span>
-        </div>
+        </h2>
         <div  class="linear_margin">
             <span>现居武汉</span>
         </div>
         <div  class="linear_margin">
             <span>Android|Web前后端</span>
         </div>
-        <div style="margin-top: 48px;">
+        <div style="margin-top: 48px;text-align: center;">
             <div>
                 自我评价
             </div>
-            <ul style="text-align: left;">
+            <ul  style="text-align: left;margin-left: -10px;">
                 <li class="linear_margin">性格开朗、积极向上、为人友善、具有良好的人际交往能力</li>
                 <li class="linear_margin">诚实守信，做事有始有终，吃苦耐劳，能够虚心向他人请教</li>
                 <li class="linear_margin">有较强的学习能力和抗压能力，有较强的自学能力，能充分利用网络资源</li>
@@ -103,7 +113,7 @@
     </div>
     <!-- 内容 -->
 
-    <div class="card content" style="background: rgb(241, 227, 201)">
+    <div class="card content" style="background: rgb(241, 227, 201);opacity: .7;">
         
         <div class="m_bottom">
             <div class="m_bottom">
@@ -150,7 +160,7 @@
                 &nbsp;2021.3-2020.5
             </div>
             <div >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人进行"枫叶记账"APP的开发工作，枫叶记账是一筐基于Kotlin语言、Jetpack组件的MVVM架构式
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人进行"枫叶记账"APP的开发工作，枫叶记账是一个基于Kotlin语言、Jetpack组件的MVVM架构式
                 手机端记账程序，支持账单统计、账单搜索、账单导入和导出等多种功能
                 <div style="text-align: center;">
                     <a href="https://play.google.com/store/apps/details?id=com.flywinter.mapleaccount" target="_blank">Google Play下载链接</a>
