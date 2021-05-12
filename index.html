@@ -82,14 +82,81 @@
     body{
         margin: 0px  !important;
     }
+    .margin_left{
+        margin-left: 8px;
+    }
+    @keyframes fade_in{
+        0%{
+            opacity: .7;
+        }
+        60%{
+            opacity: .4;
+        }
+        100%{
+            opacity: .9;
+        }
+
+    }
+    @keyframes fade_out{
+        from{
+            opacity: 0.9;
+        }
+        to{
+            opacity: 0.4;
+        }
+    }
+    @keyframes zoom_in{
+        0%{
+            transform: scale(0);
+            transform: rotate(0deg);
+        }
+        60%{
+            transform: scale(100%);
+        }
+        80%{
+            transform: scale(120%);
+          
+        }
+        100%{
+            transform: scale(100%);
+            transform: rotate(360deg);
+        }
+    
+    }
+    @keyframes rotate{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+
+    }
+    /* .animatie:hover{
+        animation: fade_in .5s ease-in-out;
+    } */
+    .animati{
+        animation: fade_out .6s ease-in;
+    }
+    .ani_zoom{
+        animation: zoom_in 1s;
+    }
+    /* .ani_zoom_fade{
+        animation: zoom_in  .8s ease-in infinite;
+    } */
+    .ani_zooms:hover{
+        animation: rotate 4s linear infinite;
+        animation-fill-mode: forwards;
+    }
+    
    
 </style>
 <div class="background"></div>
 <div class=" mobile" >
 
     <!-- 侧边栏 -->
-    <div class="side card"  style="text-align: center;background: #93edc7;opacity: .9;height: fit-content;" > 
-        <img class="user_photo" src="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/>
+    <div class="side card  animati  "  style="text-align: center;background: #93edc7;opacity: .9;height: fit-content;" > 
+        <img class="user_photo ani_zooms" src="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/>
         <h2 class="linear_margin">
             <span>张兴坤</span>
         </h2>
@@ -99,39 +166,40 @@
         <div  class="linear_margin">
             <span>Android|Web前后端</span>
         </div>
-        <div style="margin-top: 48px;text-align: center;">
-            <div>
+        <div style="margin-top: 48px; ">
+            <h3>
                 自我评价
-            </div>
-            <ul  style="text-align: left;margin-left: -10px;">
-                <li class="linear_margin">性格开朗、积极向上、为人友善、具有良好的人际交往能力</li>
-                <li class="linear_margin">诚实守信，做事有始有终，吃苦耐劳，能够虚心向他人请教</li>
-                <li class="linear_margin">有较强的学习能力和抗压能力，有较强的自学能力，能充分利用网络资源</li>
-            </ul>
+            </h3>
+           
+                <ul  style="text-align: left;width: fit-content;margin-left: -8px;">
+                    <li class="linear_margin">性格开朗、积极向上、为人友善、具有良好的人际交往能力</li>
+                    <li class="linear_margin">诚实守信，做事有始有终，吃苦耐劳，能够虚心向他人请教</li>
+                    <li class="linear_margin">有较强的学习能力和抗压能力，有较强的自学能力，能充分利用网络资源</li>
+                </ul>
+            
+        
 
         </div>
     </div>
     <!-- 内容 -->
 
-    <div class="card content" style="background: rgb(241, 227, 201);opacity: .7;">
+    <div class="card content  animati" style="background: rgb(241, 227, 201);opacity: .7;">
         
         <div class="m_bottom">
-            <div class="m_bottom">
+            <h3 class="m_bottom">
                 教育背景
-            </div>
-            <div style="display: flex; flex-direction: row;">
-                <div style="width: 50%;">2018.09-2022.06</div>
-                 <div style="width: 50%;">
-                     <div>武汉工程大学</div>
-                    <div>机械电子工程</div>
-                    <div>本科</div>
+            </h3>
+            <div class="margin_left">
+                <div >2018.09-2022.06</div>
+                 <div >
+                     <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;武汉工程大学-机械电子工程-本科</div>
                 </div>
             </div>
         </div>
         <div  class="linear_margin">
-            <div>
+            <h3>
                 个人技能
-            </div> 
+            </h3> 
             <ul style="text-align: left;">
                 <li class="m_bottom">熟悉C、Java，Kotlin、了解Python</li>
                 <li class="m_bottom">熟悉Html5,css3,javascript</li>
@@ -147,30 +215,33 @@
            
         </div>
         <div  class="m_bottom">
-            <div class="m_bottom">
+            <h3 class="m_bottom">
                 项目经历
-            </div>
-            <div style="margin-bottom: 4px;">
-                &nbsp;2020.6-2020.12
-            </div>
-            <div style="margin-bottom: 6px">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;完成了个人博客网站的开发
-            </div >
-            <div style="margin-bottom: 4px;">
-                &nbsp;2021.3-2020.5
-            </div>
-            <div >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人进行"枫叶记账"APP的开发工作，枫叶记账是一个基于Kotlin语言、Jetpack组件的MVVM架构式
-                手机端记账程序，支持账单统计、账单搜索、账单导入和导出等多种功能
-                <div style="text-align: center;">
-                    <a href="https://play.google.com/store/apps/details?id=com.flywinter.mapleaccount" target="_blank">Google Play下载链接</a>
+            </h3>
+            <div class="margin_left">
+                <div style="margin-bottom: 4px;">
+                    &nbsp;2020.6-2020.12
+                </div>
+                <div style="margin-bottom: 6px">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;完成了个人博客网站的开发
+                </div >
+                <div style="margin-bottom: 4px;">
+                    &nbsp;2021.3-2020.5
+                </div>
+                <div >
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人进行"枫叶记账"APP的开发工作，枫叶记账是一个基于Kotlin语言、Jetpack组件的MVVM架构式
+                    手机端记账程序，支持账单统计、账单搜索、账单导入和导出等多种功能
+                    <div style="text-align: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.flywinter.mapleaccount" target="_blank">枫叶记账Google Play下载链接</a>
+                    </div>
                 </div>
             </div>
+            
         </div>
         <div  class="m_bottom">
-            <div>
+            <h3>
                 奖励荣誉
-            </div>
+            </h3>
             <ul>
                 <li class="m_bottom">
                     2019创行社会创新大赛区域赛三等奖
