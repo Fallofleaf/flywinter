@@ -11,7 +11,7 @@
 </head>
 <body>
 <style>
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1200px){
         .side {
 
             width: 250px !important;
@@ -24,23 +24,31 @@
         .mobile {
             display: flex;
             flex-wrap: nowrap;
-
-
+        }
+        .gallery_content{
+            flex: 0 0 24%;
         }
     }
 
-    /* @media  screen and (max-width:1200px) {
-        .side{
-        
-            width: 25% !important;
+    @media   (min-width: 960px) and (max-width: 1200px){
+        .side {
+
+            width: 250px !important;
         }
-        .mobile{
+
+        .content {
+            width: 60%;
+        }
+
+        .mobile {
             display: flex;
             flex-wrap: nowrap;
-
-           
         }
-    } */
+        .gallery_content{
+            flex: 0 0 33%;
+        }
+    }
+
     @media screen and (max-width: 960px) {
         .side {
 
@@ -54,6 +62,9 @@
         .mobile {
             display: flex;
             flex-wrap: wrap;
+        }
+        .gallery_content{
+            flex: 0 0 95%;
         }
     }
 
@@ -324,36 +335,6 @@
         </div>
     </div>
 </div>
-<!--<button id="float_button" class="float_button"  style="border: white" onclick="floatClick()">-->
-<!--    <span>-->
-<!--        float-->
-<!--    </span>-->
-<!--</button>-->
-<!--<button id="menu1" class="float_menu" onclick="requestGet()" style="border: white;bottom: 144px;visibility: hidden">-->
-<!--    <span>-->
-<!--        Gallery-->
-<!--    </span>-->
-<!--</button>-->
-
-
-<!--<div style="margin-top: 128px">-->
-<!--    <button class="button" onclick="requestGet()" type="button" style="-->
-
-<!--    margin-left: auto;-->
-<!--    margin-right: auto;-->
-<!--    display: block;-->
-<!--">-->
-<!--        图片画廊-->
-<!--    </button>-->
-<!--<div class="menu_bt_h">导航菜单_水平-->
-<!--    <div class="menu_item_h">弹出菜单_水平</div>-->
-<!--</div>-->
-
-<!--<div class="menu_btn_v" style="z-index: 5">-->
-<!--    <i class="bi bi-list"></i>-->
-<!--    <div class="menu_item_v trans_fadeout" onclick="requestGet()">弹出</div>-->
-
-<!--</div>-->
 <div class="float_menu">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
          viewBox="0 0 16 16">
@@ -423,17 +404,14 @@ margin: 8px;">
     line-height: 40px;
     outline: none;
     padding: 0 15px;
-    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-
-">
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);">
             <option class="">25</option>
             <option class="">50</option>
             <option class="">100</option>
             <option class="">200</option>
         </select>
         <button type="button" onclick="searchImg()"
-        style="
-background-color: #fff;
+        style="background-color: #fff;
     background-image: none;
     border-radius: 4px;
     border: 1px solid #dcdfe6;
@@ -448,14 +426,15 @@ background-color: #fff;
     transition: border-color .2s cubic-bezier(.645,.045,.355,1);"
         >搜索</button>
     </div>
+
+
     <div id="img_gallery" class="" style="
-
-
-    width: fit-content;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    place-content: center;
+    justify-content: center;
+    /*flex-flow: row wrap;*/
     ">
     </div>
 </div>
@@ -524,7 +503,7 @@ background-color: #fff;
         console.log(keyWords);
         imgGallery.innerHTML = ""
         let requestURL = "https://pixabay.com/api/?key=21039693-40d98fce614790ce1b9fefb04&q="+encodeURI(keyWords)+"&per_page="+size+"&pretty=true"
-        console.log(requestURL);
+        // console.log(requestURL);
         let request = new XMLHttpRequest();
         request.open("get", requestURL)
         request.send()
@@ -534,13 +513,18 @@ background-color: #fff;
                 let json = JSON.parse(all);
                 let hits = json.hits;
                 for (let hite of hits) {
-                    let htmlImageElement = document.createElement("img");
-                    htmlImageElement.src = hite.largeImageURL
-                    htmlImageElement.className = 'card'
-                    htmlImageElement.style.width = "450px"
-                    htmlImageElement.style.padding = "0"
-                    imgGallery.appendChild(htmlImageElement)
-                    // console.log(hite.id);
+                    let imgElement = document.createElement("img");
+                    let divElement = document.createElement('div');
+
+                    imgElement.src = hite.largeImageURL
+                    imgElement.style.height = '100%'
+                    imgElement.style.width = '100%'
+                    imgElement.className = ''
+                    divElement.appendChild(imgElement)
+                    divElement.className = 'card gallery_content'
+                    divElement.style.padding = "0"
+
+                    imgGallery.appendChild(divElement)
                 }
             }
         }
@@ -564,13 +548,19 @@ background-color: #fff;
 
                     let hits = json.hits;
                     for (let hite of hits) {
-                        let htmlImageElement = document.createElement("img");
-                        htmlImageElement.src = hite.largeImageURL
-                        htmlImageElement.className = 'card'
-                        htmlImageElement.style.width = "450px"
-                        htmlImageElement.style.padding = "0"
-                        imgGallery.appendChild(htmlImageElement)
-                        console.log(hite.id);
+                        let imgElement = document.createElement("img");
+                        let divElement = document.createElement('div');
+
+                        imgElement.src = hite.largeImageURL
+                        imgElement.style.height = '100%'
+                        imgElement.style.width = '100%'
+                        imgElement.className = ''
+                        divElement.appendChild(imgElement)
+                        divElement.className = 'card gallery_content'
+                        divElement.style.padding = "0"
+
+                        imgGallery.appendChild(divElement)
+                        // console.log(hite.id);
                     }
                     // for (let i = 0; i < hits.length; i++) {
                     //     let htmlImageElement = document.createElement("img");
