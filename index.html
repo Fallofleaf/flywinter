@@ -8,237 +8,18 @@
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/>
     <title>落叶知秋的简历</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="./css/myCss.css">
+    <style>
+
+    </style>
 </head>
 <body>
-<style>
-    @media screen and (min-width: 1200px){
-        .side {
 
-            width: 250px !important;
-        }
-
-        .content {
-            width: 60%;
-        }
-
-        .mobile {
-            display: flex;
-            flex-wrap: nowrap;
-        }
-        .gallery_content{
-            flex: 0 0 24%;
-        }
-    }
-
-    @media   (min-width: 960px) and (max-width: 1200px){
-        .side {
-
-            width: 250px !important;
-        }
-
-        .content {
-            width: 60%;
-        }
-
-        .mobile {
-            display: flex;
-            flex-wrap: nowrap;
-        }
-        .gallery_content{
-            flex: 0 0 33%;
-        }
-    }
-
-    @media screen and (max-width: 960px) {
-        .side {
-
-            width: 100% !important;
-        }
-
-        .content {
-            width: 100%;
-        }
-
-        .mobile {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .gallery_content{
-            flex: 0 0 95%;
-        }
-    }
-
-    .background {
-        background: url('./img/504016690347118592f3afc4c5d2864264810a5ad1f7b1428c.jpeg') no-repeat;
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        overflow: visible;
-    }
-
-    .card {
-        box-shadow: 0px 0px 6px #2c2c2c;
-
-        border-radius: 4px;
-        margin: 8px;
-        padding: 16px;
-    }
-
-    .user_photo {
-        border-radius: 50%;
-        margin: 10px;
-        min-width: 150px;
-        min-height: 150px;
-    }
-
-    .linear_margin {
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-
-    .m_bottom {
-        margin-bottom: 8px;
-    }
-
-    body {
-        margin: 0px !important;
-    }
-
-    .margin_left {
-        margin-left: 8px;
-    }
-
-    @keyframes fade_in {
-        0% {
-            opacity: .7;
-        }
-        60% {
-            opacity: .4;
-        }
-        100% {
-            opacity: .9;
-        }
-
-    }
-
-    @keyframes fade_out {
-        from {
-            opacity: 0.9;
-        }
-        to {
-            opacity: 0.4;
-        }
-    }
-
-    @keyframes zoom_in {
-        0% {
-            transform: scale(0) rotate(0deg);
-        }
-        60% {
-            transform: scale(1, 1);
-        }
-        80% {
-            transform: scale(2, 2);
-
-        }
-        100% {
-            transform: scale(1, 1) rotate(360deg);
-        }
-
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-
-    }
-
-    .animati {
-        animation: fade_out .6s ease-in;
-    }
-
-    .ani_zoom {
-        animation: zoom_in 1s;
-    }
-
-    .ani_zooms:hover {
-        animation: rotate 4s linear infinite;
-        animation-fill-mode: forwards;
-    }
-
-
-    /*浮动按钮*/
-    .float_menu {
-        box-shadow: 0 0 4px whitesmoke;
-        height: 56px;
-        width: 56px;
-        position: fixed;
-        bottom: 64px;
-        right: 32px;
-        border-radius: 50%;
-        place-content: center;
-        align-items: center;
-        display: flex;
-        background: white;
-        z-index: 5;
-    }
-    .float_item {
-        width: 48px;
-        height: 48px;
-        z-index: 5;
-        border-radius: 50%;
-        cursor: pointer;
-        border: white;
-        place-content: center;
-        align-items: center;
-        display: flex;
-        margin-bottom: 10px;
-    }
-
-    .float_items{
-        z-index: 5;
-        opacity: 0;
-        visibility: hidden;
-        position: fixed;
-        bottom: 120px;
-        right: 36px;
-        transition: all 0.5s linear;
-    }
-
-     .float_menu:hover + .float_items  {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .float_items:hover {
-        opacity: 1;
-        visibility: visible;
-    }
-    .select-dropdown_item {
-        font-size: 14px;
-        padding: 0 20px;
-        position: relative;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: #606266;
-        height: 34px;
-        line-height: 34px;
-        box-sizing: border-box;
-        cursor: pointer;
-    }
-
-</style>
 <div class="background" style="z-index: -1"></div>
 <div class=" mobile">
     <!-- 侧边栏 -->
     <div class="side card  animati  " style="text-align: center;background: #93edc7;opacity: .9;height: fit-content;">
-        <img class="user_photo ani_zooms" src="https://avatars.githubusercontent.com/u/42455616?s=60&v=4"/>
+        <img class="user_photo ani_zooms" src="https://avatars.githubusercontent.com/u/42455616?s=60&v=4" alt="user"/>
         <h2 class="linear_margin">
             <span>张兴坤</span>
         </h2>
@@ -247,6 +28,41 @@
         </div>
         <div class="linear_margin">
             <span>Android|Web前后端</span>
+        </div>
+        <div>
+            <a class="link_icon" href="https://github.com/fallofleaf" target="_blank" title="github"
+               style="text-decoration: none;color: black">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                         class="bi bi-github" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                </i>
+            </a>
+
+            <a class="link_icon" href="https://www.facebook.com/leaf.fall.1829/" target="_blank" title="facebook"
+               style="text-decoration: none;color: black">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                         class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                </i>
+            </a>
+
+            <i class="link_icon" title="14768628829" style="color: black">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                     class="bi bi-chat-dots" viewBox="0 0 16 16">
+                    <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                    <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
+                </svg>
+            </i>
+            <i class="link_icon" title="1475795322@qq.com" style="color: black">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                     class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                </svg>
+            </i>
         </div>
         <div style="margin-top: 48px; ">
             <h3>
@@ -334,6 +150,42 @@
             </ul>
         </div>
     </div>
+
+
+    <!-- 导航栏 -->
+    <div class="side_nav card  animati  "
+         style="text-align: center;background: #b6fbff;opacity: .9;height: fit-content;">
+        <div id="nav_home" class="linear_margin" style="margin-bottom: 32px;cursor: pointer;" title="基本信息">
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house"
+                     viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd"
+                          d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg>
+            </i>
+        </div>
+        <div id="nav_skill" class="linear_margin" style="margin-bottom: 32px;cursor: pointer;" title="技能">
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box"
+                     viewBox="0 0 16 16">
+                    <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                </svg>
+            </i>
+        </div>
+        <div id="nav_image" class="linear_margin" style="margin-bottom: 32px;cursor: pointer;" title="技能">
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-images"
+                     viewBox="0 0 16 16">
+                    <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
+                </svg>
+            </i>
+        </div>
+
+    </div>
+
 </div>
 <div class="float_menu">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
@@ -343,7 +195,7 @@
     </svg>
 </div>
 
-<div class="float_items" >
+<div class="float_items">
     <button id="to_top" class="float_item " onclick="ScrollTop(0,200)">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short"
              viewBox="0 0 16 16">
@@ -358,84 +210,25 @@
             <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
         </svg>
     </button>
-
-
 </div>
 
-
-
-<div id="image_content" style="text-align: center;visibility: hidden;
-box-shadow: 0 0 6px #2c2c2c;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.5);
-margin: 8px;">
+<div id="image_content">
     <h2 style="margin: 8px">
         图片画廊
     </h2>
     <div>
-
-        <input id="search_key" type="text" placeholder="请输入关键词"
-        style="    -webkit-appearance: none;
-    background-color: #fff;
-    background-image: none;
-    border-radius: 4px;
-    border: 1px solid #dcdfe6;
-    box-sizing: border-box;
-    color: #606266;
-    display: inline-block;
-    font-size: inherit;
-    height: 40px;
-    line-height: 40px;
-    outline: none;
-    padding: 0 15px;
-    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-    "
-        >
-        <select id="search_size"  style="
-    background-color: #fff;
-    background-image: none;
-    border-radius: 4px;
-    border: 1px solid #dcdfe6;
-    box-sizing: border-box;
-    color: #606266;
-    display: inline-block;
-    font-size: inherit;
-    height: 40px;
-    line-height: 40px;
-    outline: none;
-    padding: 0 15px;
-    transition: border-color .2s cubic-bezier(.645,.045,.355,1);">
-            <option class="">25</option>
-            <option class="">50</option>
-            <option class="">100</option>
-            <option class="">200</option>
+        <label for="search_key"></label>
+        <input id="search_key" type="text" placeholder="请输入关键词" class="input_style">
+        <label for="search_size"></label>
+        <select id="search_size" class="select_style">
+        <option class="">25</option>
+        <option class="">50</option>
+        <option class="">100</option>
+        <option class="">200</option>
         </select>
-        <button type="button" onclick="searchImg()"
-        style="background-color: #fff;
-    background-image: none;
-    border-radius: 4px;
-    border: 1px solid #dcdfe6;
-    box-sizing: border-box;
-    color: #606266;
-    display: inline-block;
-    font-size: inherit;
-    height: 40px;
-    line-height: 40px;
-    outline: none;
-    padding: 0 15px;
-    transition: border-color .2s cubic-bezier(.645,.045,.355,1);"
-        >搜索</button>
+        <button type="button" onclick="searchImg()" class="button_style">搜索</button>
     </div>
-
-
-    <div id="img_gallery" class="" style="
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*flex-flow: row wrap;*/
-    ">
+    <div id="img_gallery">
     </div>
 </div>
 <!-- <table border="1" >
@@ -449,143 +242,11 @@ margin: 8px;">
 </table> -->
 <script type="text/javascript">
 
-    // let imgChild = document.createElement("img");
-    let imgGallery = document.getElementById("img_gallery");
-    let imgContent = document.getElementById('image_content')
-    // imgGallery.appendChild(imgChild)
 
-
-
-    // floatButton.addEventListener('mouseover',function (e) {
-    //     console.log("鼠标悬浮")
-    //     document.getElementById('menu1').style.visibility = 'visible'
-    // })
-    // floatButton.addEventListener('mouseleave',function (e) {
-    //     console.log("鼠标离开")
-    //     document.getElementById('menu1').style.visibility = 'hidden'
-    //
-    // })
-    const ScrollTop = (number = 0, time) => {
-        if (!time) {
-            document.body.scrollTop = document.documentElement.scrollTop = number;
-            return number;
-        }
-        const spacingTime = 20; // 设置循环的间隔时间  值越小消耗性能越高
-        let spacingInex = time / spacingTime; // 计算循环的次数
-        let nowTop = document.body.scrollTop + document.documentElement.scrollTop; // 获取当前滚动条位置
-        let everTop = (number - nowTop) / spacingInex; // 计算每次滑动的距离
-        let scrollTimer = setInterval(() => {
-            if (spacingInex > 0) {
-                spacingInex--;
-                ScrollTop(nowTop += everTop);
-            } else {
-                clearInterval(scrollTimer); // 清除计时器
-            }
-        }, spacingTime);
-    };
-
-    document.getElementById('search_key').addEventListener('keydown',function (event) {
-        if (event.key === 'Enter') {
-            console.log('enter')
-            searchImg()
-        }
-    },true)
-
-
-    function searchImg(){
-        let keyWords = document.getElementById('search_key').value
-        let size = document.getElementById('search_size').value
-        if (keyWords.length === 0) {
-            keyWords = 'peace'
-            document.getElementById('search_key').value = keyWords
-        }
-        console.log(size);
-        console.log(keyWords);
-        imgGallery.innerHTML = ""
-        let requestURL = "https://pixabay.com/api/?key=21039693-40d98fce614790ce1b9fefb04&q="+encodeURI(keyWords)+"&per_page="+size+"&pretty=true"
-        // console.log(requestURL);
-        let request = new XMLHttpRequest();
-        request.open("get", requestURL)
-        request.send()
-        request.onreadystatechange = function () {
-            if (request.readyState === 4 && request.status === 200) {
-                let all = request.responseText
-                let json = JSON.parse(all);
-                let hits = json.hits;
-                for (let hite of hits) {
-                    let imgElement = document.createElement("img");
-                    let divElement = document.createElement('div');
-
-                    imgElement.src = hite.largeImageURL
-                    imgElement.style.height = '100%'
-                    imgElement.style.width = '100%'
-                    imgElement.className = ''
-                    divElement.appendChild(imgElement)
-                    divElement.className = 'card gallery_content'
-                    divElement.style.padding = "0"
-
-                    imgGallery.appendChild(divElement)
-                }
-            }
-        }
-    }
-
-
-    function requestGet() {
-        let requestURL = "https://pixabay.com/api/?key=21039693-40d98fce614790ce1b9fefb04&q=yellow+flowers&image_type=photo&pretty=true"
-        let request = new XMLHttpRequest();
-        request.open("get", requestURL)
-        request.send()
-        if (imgContent.style.visibility === "visible") {
-            imgContent.style.visibility = "hidden"
-            imgGallery.innerHTML = ""
-        } else {
-            imgContent.style.visibility = "visible"
-            request.onreadystatechange = function () {
-                if (request.readyState === 4 && request.status === 200) {
-                    let all = request.responseText
-                    let json = JSON.parse(all);
-
-                    let hits = json.hits;
-                    for (let hite of hits) {
-                        let imgElement = document.createElement("img");
-                        let divElement = document.createElement('div');
-
-                        imgElement.src = hite.largeImageURL
-                        imgElement.style.height = '100%'
-                        imgElement.style.width = '100%'
-                        imgElement.className = ''
-                        divElement.appendChild(imgElement)
-                        divElement.className = 'card gallery_content'
-                        divElement.style.padding = "0"
-
-                        imgGallery.appendChild(divElement)
-                        // console.log(hite.id);
-                    }
-                    // for (let i = 0; i < hits.length; i++) {
-                    //     let htmlImageElement = document.createElement("img");
-                    //     htmlImageElement.src = hits.previewURL
-                    //     imgGallery.appendChild(htmlImageElement)
-                    // }
-                    console.log(hits.length);
-
-                    // let list = [1,2,3,4]
-                    // for (let number of list) {
-                    //     console.log(number);
-                    // }
-
-                    // console.log(request.responseText)
-                    // document.getElementById("xml").textContent = json
-                    // window.open(requestURL,'_blank')
-                    // window.open(requestURL,'_self')
-                }
-            }
-
-
-        }
-    }
 
 </script>
+<script type="text/javascript" src="./js/myJs.js"></script>
+
 </body>
 
 </html>
